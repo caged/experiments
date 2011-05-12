@@ -149,4 +149,14 @@ rect {
 .s16_23_fg, .s16_23_fga { fill: #f7a625; stroke: #f7a625; }
 .s3_fg, .s3_fga { fill: #f7d204; stroke: #f7d204; }
 
+.symbol {
+  stroke: #cc0000;
+  fill: #dc3c0d;
+  fill-opacity: 0.5;
+}
+
+.plabel {
+  font-size: 14px;
+  font-weight: bold;
+}
 /* @end */

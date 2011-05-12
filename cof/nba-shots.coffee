@@ -22,8 +22,8 @@ $ ->
     w = 1300
     h = 300
     pad = 30
-    lw = 300
-    lrw = 10
+    lw = 300 # label width
+    lrw = 10 # label rect width
     teams = d3.entries(data)
     barcnt = d3.range(5)
     

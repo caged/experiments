@@ -6,7 +6,6 @@ $ ->
   y = d3.scale.linear().domain([0, rc]).range [h, 0]
   x = d3.scale.linear().domain([0, cc]).range [0, w]
   
-  
   grid = d3.select('#grid')
     .append('svg:svg')
       .attr('width', w)
