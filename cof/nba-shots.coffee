@@ -11,7 +11,7 @@ $ ->
     s16_23_fga: "16-23'"
     s3_fga: "3pt"
     
-  $.getJSON '../pub/data/shot-totals.json', (data) ->
+  $.getJSON 'pub/data/shot-totals.json', (data) ->
     keys = ['srim_fg', 's3_9_fg', 's10_15_fg', 's16_23_fg', 's3_fg']
     # keys = ['srim_fga', 's3_9_fga', 's10_15_fga', 's16_23_fga', 's3_fga']
     

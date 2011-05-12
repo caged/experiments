@@ -13,7 +13,7 @@
       s16_23_fga: "16-23'",
       s3_fga: "3pt"
     };
-    return $.getJSON('../pub/data/shot-totals.json', function(data) {
+    return $.getJSON('pub/data/shot-totals.json', function(data) {
       var barcnt, groups, h, keys, legend, lrw, lw, pad, ranks, rules, sort, teams, totals, vis, w, x1, x2, x3, y;
       keys = ['srim_fg', 's3_9_fg', 's10_15_fg', 's16_23_fg', 's3_fg'];
       totals = [];
