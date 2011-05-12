@@ -1,0 +1,152 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background: rgb(0,0,0) url(../img/bg.png);
+  font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(255,255,255,0.7);
+}
+
+/*------------------------------------------------------------------------------------
+  @group typography
+------------------------------------------------------------------------------------*/
+
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+  color: rgba(255,255,255,1);
+}
+
+a {
+  color: rgba(255,255,255,0.7);
+}
+/* @end */
+
+/*------------------------------------------------------------------------------------
+  @group structure
+------------------------------------------------------------------------------------*/
+
+#grid {
+  margin: 20px auto;
+  display: block;
+  width: 800px;
+}
+
+footer {
+  margin: 20px;
+  text-align: center;
+  color: rgba(255,255,255,0.2);
+  font-size: 12px;
+}
+
+/* @end */
+
+/*------------------------------------------------------------------------------------
+  @group grid
+------------------------------------------------------------------------------------*/
+.hide {
+  display: none;
+}
+
+.rule {
+  stroke: rgb(100,100,100);
+  stroke-width: 1px;
+  stroke-opacity: 0.2;
+  shape-rendering: crispEdges;
+}
+
+/* @end */
+
+/*------------------------------------------------------------------------------------
+  @group data
+------------------------------------------------------------------------------------*/
+text {
+  fill: rgb(255,255,255);
+  fill-opacity: 0.9;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+}
+
+rect {
+  fill: none;
+  fill-opacity: 0.4;
+  stroke: rgb(75,75,75);
+  shape-rendering: crispEdges;
+}
+
+.lbl {
+  fill: rgb(255,255,255);
+  fill-opacity: 0.9;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 8px;
+  letter-spacing: 0.3em;
+}
+
+.rnk {
+  fill: rgb(100,100,100);
+  fill-opacity: 0.6;
+}
+
+.legend {
+  cursor: pointer;
+}
+
+.srim_fg, .srim_fga { fill: #cc0000; stroke: #cc0000; }
+.s3_9_fg, .s3_9_fga { fill: #dc3c0d; stroke: #dc3c0d; }
+.s10_15_fg, .s10_15_fga { fill: #eb791b; stroke: #eb791b; }
+.s16_23_fg, .s16_23_fga { fill: #f7a625; stroke: #f7a625; }
+.s3_fg, .s3_fga { fill: #f7d204; stroke: #f7d204; }
+
+/* @end */
