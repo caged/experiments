@@ -13,7 +13,7 @@
       s16_23_fga: "16-23'",
       s3_fga: "3pt"
     };
-    return $.getJSON('data/shot-totals.json', function(data) {
+    return $.getJSON('../pub/data/shot-totals.json', function(data) {
       var barcnt, groups, h, keys, legend, lrw, lw, pad, ranks, rules, sort, teams, totals, vis, w, x1, x2, x3, y;
       keys = ['srim_fg', 's3_9_fg', 's10_15_fg', 's16_23_fg', 's3_fg'];
       totals = [];
@@ -22,7 +22,7 @@
           return totals.push(team[k]);
         });
       });
-      w = 1400;
+      w = 1200;
       h = 300;
       pad = 30;
       lw = 300;
@@ -33,7 +33,7 @@
       x1 = d3.scale.ordinal().domain(d3.range(teams.length)).rangeBands([0, w], .1);
       x2 = d3.scale.ordinal().domain(barcnt).rangeRoundBands([0, x1.rangeBand()], .4);
       x3 = d3.scale.ordinal().domain(barcnt).rangeRoundBands([0, lw], .2);
-      vis = d3.select('#chart').append('svg:svg').attr('width', w + (pad * 2)).attr('height', h + (pad * 2)).append('svg:g').attr('transform', "translate(" + pad + "," + pad + ")");
+      vis = d3.select('#chart').attr('style', "margin: 0 auto; width: " + (w + (pad * 2)) + "px").append('svg:svg').attr('width', w + (pad * 2)).attr('height', h + (pad * 2)).append('svg:g').attr('transform', "translate(" + pad + "," + pad + ")");
       groups = vis.selectAll('g.team').data(teams).enter().append('svg:g').attr('transform', function(d, i) {
         return "translate(" + (x1(i)) + ", 0)";
       }).attr('class', function(d) {
@@ -115,7 +115,7 @@
         });
         return ranks.text(function(d) {
           return "#" + (_.indexOf(steams, d.key) + 1);
-        });
+        }).attr('class', 'rnk');
       };
     });
   });
