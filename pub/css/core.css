@@ -93,7 +93,7 @@ header h1 a {
 #grid {
   margin: 20px auto;
   display: block;
-  width: 800px;
+  width: 850px;
 }
 
 footer {
@@ -130,6 +130,10 @@ p.desc {
   position: relative;
 }
 
+/*#grid li:nth-child(odd) {
+  margin-right: 0;
+}*/
+
 #grid li a.thumb {
   display: block;
   border: 1px solid rgba(100,100,100,0.5);
@@ -158,6 +162,7 @@ p.desc {
 #grid li h2 {
   margin: 10px 5px;
   font-weight: bold;
+  text-align: center;
 }
 
 /* @end */
