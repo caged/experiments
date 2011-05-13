@@ -127,12 +127,13 @@ p.desc {
   display: inline-block;
   margin: 5px;
   padding: 0;
+  position: relative;
 }
 
-#grid li a {
+#grid li a.thumb {
   display: block;
   border: 1px solid rgba(100,100,100,0.5);
-  height: 100px;
+  height: 210px;
 }
 
 #grid li img {
@@ -141,6 +142,8 @@ p.desc {
   background: transparent -webkit-gradient(linear, left top, left bottom, from(rgba(100,100,100,0.1)), to(rgba(100,100,100,0.5)));
   background: transparent -moz-linear-gradient(top, rgba(100,100,100,0.5), rgba(100,100,100,1));
   -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,1);
+  -moz-box-shadow: 2px 2px 2px rgba(0,0,0,1);
+  box-shadow: 2px 2px 2px rgba(0,0,0,1);
 }
 
 #grid li:hover img {
@@ -150,6 +153,11 @@ p.desc {
   box-shadow: 0 0 8px #0db5f7;
   color: rgba(255,255,255,0.9);
   text-shadow: 10px 10px 4px #0db5f7;
+}
+
+#grid li h2 {
+  margin: 10px 5px;
+  font-weight: bold;
 }
 
 /* @end */
