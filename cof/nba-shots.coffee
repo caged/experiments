@@ -119,7 +119,7 @@ $ ->
       .attr('dx', lrw + 6)
       .attr('dy', lrw / 2 + 3)
       .text((d) -> labels[d])
-
+    
     # SORT GROUPS
     sort = (f) ->
       steams = _(teams).chain()
