@@ -1,7 +1,7 @@
 (function() {
   $(function() {
     var angle, arc, lbl, prog, r, ri, ro, update, vis;
-    r = 200;
+    r = 600;
     ri = r / 2 - 20;
     ro = r / 2 - 10;
     prog = d3.range(1, 101);

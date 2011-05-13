@@ -72,6 +72,18 @@ h1 {
 a {
   color: rgba(255,255,255,0.7);
 }
+
+header h1 a {
+  display: block;
+  font-size: 70px;
+  color: rgba(100,100,100,0.2);
+  letter-spacing: .09em;
+  height: 19px;
+  background: url(../img/lrr.png) no-repeat;
+  text-indent: -9999px;
+  margin: 20px auto;
+  width: 109px;
+}
 /* @end */
 
 /*------------------------------------------------------------------------------------
@@ -109,6 +121,35 @@ p.desc {
   stroke-width: 1px;
   stroke-opacity: 0.2;
   shape-rendering: crispEdges;
+}
+
+#grid li {
+  display: inline-block;
+  margin: 5px;
+  padding: 0;
+}
+
+#grid li a {
+  display: block;
+  border: 1px solid rgba(100,100,100,0.5);
+  height: 100px;
+}
+
+#grid li img {
+  margin: 0;
+  padding: 5px;
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(rgba(100,100,100,0.1)), to(rgba(100,100,100,0.5)));
+  background: transparent -moz-linear-gradient(top, rgba(100,100,100,0.5), rgba(100,100,100,1));
+  -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,1);
+}
+
+#grid li:hover img {
+  background: #0db5f7;
+  -webkit-box-shadow: 0 0 8px #0db5f7;
+  -moz-box-shadow: 0 0 8px #0db5f7;
+  box-shadow: 0 0 8px #0db5f7;
+  color: rgba(255,255,255,0.9);
+  text-shadow: 10px 10px 4px #0db5f7;
 }
 
 /* @end */
