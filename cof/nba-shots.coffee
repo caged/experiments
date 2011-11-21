@@ -55,7 +55,7 @@ $ ->
       .attr('width', x2.rangeBand())
       .attr('height',  0)
       .attr('y', h)
-      .attr('class', (d) -> d.k)
+      .attr('class', (d) -> "#{d.k} glow")
     .transition()
       .delay((d, i) -> i * 5)
       .attr('height', (d) -> h - y(d.v))

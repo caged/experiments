@@ -49,7 +49,7 @@
       }).enter().append('svg:rect').attr('transform', function(d, i) {
         return "translate(" + (x2(i)) + ", 0)";
       }).attr('width', x2.rangeBand()).attr('height', 0).attr('y', h).attr('class', function(d) {
-        return d.k;
+        return "" + d.k + " glow";
       }).transition().delay(function(d, i) {
         return i * 5;
       }).attr('height', function(d) {

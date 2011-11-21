@@ -52,9 +52,13 @@ table {
 }
 
 body {
-  background: rgb(0,0,0) url(../img/bg.png);
+  background: #111;
   font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: rgba(255,255,255,0.7);
+}
+
+body.pattern {
+  background: #111 url(../img/bg.png);
 }
 
 /*------------------------------------------------------------------------------------
@@ -107,6 +111,12 @@ p.desc {
   text-align: center;
 }
 
+.twitter-follow-button {
+  position: fixed;
+  right: -185px;
+  top: 20px;
+}
+
 /* @end */
 
 /*------------------------------------------------------------------------------------
@@ -122,6 +132,7 @@ p.desc {
   stroke-opacity: 0.2;
   shape-rendering: crispEdges;
 }
+
 
 #grid li {
   display: inline-block;
@@ -177,12 +188,11 @@ text {
   font-size: 10px;
 }
 
-rect {
-  fill: none;
+rect.glow {
   fill-opacity: 0.4;
-  stroke: rgb(75,75,75);
   shape-rendering: crispEdges;
 }
+
 
 .lbl {
   fill: rgb(255,255,255);
@@ -218,3 +228,7 @@ rect {
   font-weight: bold;
 }
 /* @end */
+
+.stars {
+  shape-rendering: crispedges;
+}
