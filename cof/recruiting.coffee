@@ -1,16 +1,17 @@
 $ ->
     $.getJSON 'pub/data/football-recruits-2006-2011.json', (colleges) ->
-      colleges = _.sortBy(colleges, (d) -> d.value.five + d.value.four).reverse()[0...100]
-      stars = d3.layout.stack() ['two', 'three', 'four', 'five'].map (stars) ->
-        colleges.map (d) ->  { x: d._id, y: +d.value[stars] }
+      levels = ['two', 'three', 'four', 'five']
+      colleges = _.sortBy(colleges, (d) -> d.value.four + d.value.five).reverse()[0...100]
+      stars = d3.layout.stack() levels.map (level) ->
+        colleges.map (d) ->  { x: d._id, y: +d.value[level] }
       
-      [pt, pr, pb, pl] = [20, 20, 100, 50]
+      [pt, pr, pb, pl] = [20, 20, 140, 50]
       w = 5000
       h = 600
 
       x = d3.scale.ordinal().domain(stars[0].map((d) -> d.x)).rangeRoundBands([0, w - pl - pr], 0.2)
       y = d3.scale.linear().range([0, h - pt - pb]).domain([0, d3.max(stars[stars.length - 1], (d) -> d.y0 + d.y)])
-      z = d3.scale.ordinal().range ["#151515", "#1e1e1e", "#0e4d00", "green"]
+      z = d3.scale.ordinal().range ["#1e1e1e", "#262626", "#0e4d00", "green"]
 
       
       vis = d3.select('#chart')
@@ -57,7 +58,19 @@ $ ->
         .attr('class', 'label')
         .attr('text-anchor', 'bottom')
         .text((d, i) -> "#{i+1}. #{d}")
-        .attr('transform', (d) -> "translate(#{x(d) + (x.rangeBand() / 2)}, #{this.getBBox().width + 10}) rotate(-90)")
+        .attr('transform', (d) -> "translate(#{x(d) + (x.rangeBand() / 2 + 2)}, #{this.getBBox().width + 40}) rotate(-90)")
+
+
+      # Logos
+      d3.select('body').selectAll('.logo')
+        .data(x.domain())
+      .enter().append('span')
+        .attr('class', 'logo')
+        .attr('data-team', (d) -> d.toLowerCase().replace(/\s+/g, '-').replace(/\(|\)|&/g, ''))
+        .style('position', 'absolute')
+        .style('top', (d) -> "#{pt + h + 51}px")
+        .style('left', (d) -> "#{pl + x(d) + x.rangeBand() / 2 - 12}px")
+
       
       # Y axis
       rules = vis.selectAll('g.rule')
@@ -73,6 +86,15 @@ $ ->
         .attr('x', -25)
         .attr('dy', '0.3em')
         .text((d) -> d)
+
+    
+      levels.forEach (l, i) ->
+        val = "S" 
+        val += "S" for [0..i]
+        $('#legend').prepend $('<li />')
+          .css('color', z(i))
+          .addClass('star')
+          .text(val)
 
 
       
